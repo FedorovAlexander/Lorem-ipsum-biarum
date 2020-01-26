@@ -1,0 +1,15 @@
+mixin main-nav(selected)
+
+  -
+    var menu = {
+      'Lorem 1': '#lorem1',
+      'Lorem 2': '#lorem2',
+      'Lorem 3': '#lorem3',
+      'Lorem 4': '#lorem4'
+    };
+
+  nav.main-nav
+    ul.main-nav__list
+      each val, key in menu
+        li
+          a(href=val, title=key)= key
