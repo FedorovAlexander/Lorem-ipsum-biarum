@@ -64,6 +64,7 @@ let jsList = [
   './node_modules/jquery-migrate/dist/jquery-migrate.min.js',
   './node_modules/svg4everybody/dist/svg4everybody.js',
   './node_modules/object-fit-images/dist/ofi.js',
+  dirs.source + '/js/pushy.js',
   dirs.source + '/js/script.js',
 ];
 
@@ -256,7 +257,8 @@ gulp.task('serve', ['build'], function() {
     dirs.source + '/scss/style.scss',
     dirs.source + '/scss/variables.scss',
     dirs.source + '/blocks/**/*.scss',
-  ], ['style']);
+    dirs.source + '/scss/pushy.scss'
+  ], ['watch:style']);
   // Слежение за html
   gulp.watch([
     dirs.source + '/*.html',
@@ -289,6 +291,7 @@ gulp.task('watch:fonts', ['copy:fonts'], reload);
 gulp.task('watch:sprite:svg', ['sprite:svg'], reload);
 gulp.task('watch:sprite:png', ['sprite:png'], reload);
 gulp.task('watch:js', ['js'], reload);
+gulp.task('watch:style', ['style'], reload);
 
 // Перезагрузка браузера
 function reload (done) {
