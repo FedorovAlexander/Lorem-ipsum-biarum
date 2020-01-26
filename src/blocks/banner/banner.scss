@@ -1,5 +1,4 @@
 .banner {
-  overflow-y: hidden;
 
   &__list {
     position: relative;
@@ -18,6 +17,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+  
   }
 
 
@@ -67,12 +67,10 @@
 
   &__text {
     margin-top: 0;
-    margin-bottom: 0;
-    margin-bottom: 3.75rem;
+    margin-bottom: 4.9375rem;
     width: 32.3125rem;
     text-align: center;
     text-transform: uppercase;
-    line-height: 2.1875rem;
     letter-spacing: 0.54px;
     color: #ffffff;
     font-family: $text-font-family;
@@ -97,22 +95,26 @@
   padding-left: 0;
 
   li {
+    margin-right: 6px;
+    margin-left: 6px;
     list-style: none;
 
     button {
-      margin-right: 6px;
-      margin-left: 6px;
-      width: 0.75rem;
-      height: 0.75rem;
+      display: block;
+      width: 0.5rem;
+      height: 0.5rem;
       border: none;
-      border-radius: 50%;
+      border-radius: 100%;
       background-color: #fff;
-      font-size: 0;
+      padding: 0;
+      text-indent: -9999px;
     }
 
     &.slick-active {
       button {
+        border-radius: 50%;
         background-color: #64c800;
+        transform: scale(1.5);
       }
     }
   }
