@@ -17,10 +17,9 @@
 
   &__list-link {
     padding: 5px;
-    transition: background-color 0.1s linear, 
-    color 0.1s linear, 
-    text-shadow 0.1s linear,
-    text-decoration 0.1s linear;
+    transition-property: color, background-color, text-shadow, text-decoration;
+    transition-duration: .1s;
+    transition-timing-function: linear;
     text-decoration: none;
     color: #fcfefd;
     font-family: $nav-font-family;

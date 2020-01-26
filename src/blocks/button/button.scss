@@ -3,7 +3,9 @@
   border-radius: 20px;
   background-color: #64c800;
   padding: 0.5rem 3.3125rem 0.4375rem;
-  transition: background-color 0.1s linear, color 0.1s lienar;
+  transition-property: color, background-color;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
   line-height: 1.125rem;
   color: #fdfafa;
   font-family: "Myriad Pro";
