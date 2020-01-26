@@ -2,32 +2,26 @@
 
 // Make viewport great again (responsive)
 // http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-@at-root {
 
-  @-ms-viewport { // stylelint-disable-line  at-rule-no-vendor-prefix
-    width: device-width;
-  }
-}
-
-.page { // html
-
-  $block-name:                &; // #{$block-name}__element
+.page {
+  // html
 
   box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: scrollbar;
   -ms-text-size-adjust: 100%; // stylelint-disable-line  property-no-vendor-prefix
-  min-width: 320px;
-  min-height: 100%;
 
   &__wrapper {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+
     main {
       flex-grow: 1;
     }
-  
+
     footer {
       flex-shrink: 0;
     }
@@ -41,13 +35,10 @@
 }
 
 body {
-  background-color: #fff;
   margin: 0;
   min-height: 100%;
-  font-family: $font-family;
+  background-color: #fff;
   font-size: $font-size;
-  line-height: $line-height;
-  color: $text-color;
 }
 
 [tabindex='-1']:focus {
@@ -57,11 +48,6 @@ body {
 // iOS 'clickable elements' fix for role='button'
 [role='button'] {
   cursor: pointer;
-}
-
-// We love Safari
-input[type='search'] {
-  -webkit-appearance: textfield; // stylelint-disable-line  property-no-vendor-prefix
 }
 
 // Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
@@ -77,7 +63,10 @@ textarea {
   touch-action: manipulation;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 62.1875rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
