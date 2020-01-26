@@ -10,5 +10,17 @@ $(document).ready(function(){
     prevArrow: false,
     nextArrow: false
   });
+
+  $('.slick-slider-teachers').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: false,
+    prevArrow: $('.arrow-right'),
+    nextArrow: $('.arrow-left')
+  });
 });
+
+  
 

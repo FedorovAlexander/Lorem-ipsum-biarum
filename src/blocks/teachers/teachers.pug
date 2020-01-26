@@ -1,2 +1,55 @@
 mixin teachers()
-  div teachers
+
+  -
+      var teachers = {
+        1 : [
+          'img/teacher3.jpg',
+          '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'Teacher 1',
+          'Pro Member'
+          ],
+        2 : [
+          'img/teacher2.jpg',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'Teacher 2',
+          'Pro Member'
+          ],
+        3 : [
+          'img/teacher1.jpg',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'Teacher 3',
+          'Pro Member'
+          ],
+        4 : [
+          'img/teacher4.jpg',
+          'Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.',
+          'Rick Astley',
+          'Singer'
+        ],
+        
+      };
+
+
+  section.teachers
+    .teachers__wrapper.container
+      h2.teachers__title Lorem 
+        span.teachers__highlight 2
+      .teachers__slider-wrapper
+        .arrow.arrow-left
+          .arrow-top
+          .arrow-bottom
+        .arrow.arrow-right
+          .arrow-top
+          .arrow-bottom
+        ul.teachers__list.slick-slider-teachers
+          each val, key in teachers
+            li(class="teachers__list-item teachers__list-item--"+key)
+              .teachers__photo-underlay
+                div(class="teachers__photo-wrapper teachers__photo-wrapper--"+key)
+                  img.teachers__photo(src=val[0], alt="Photo of"+val[2], title=val[2])
+                p.teachers__text= val[1]
+                p.teachers__name= val[2]
+                p.teachers__status= val[3]
+      .teachers__button
+        +button
+          
