@@ -1,2 +1,56 @@
-// Подключение своих шрифтов.
-// Не пишите тут ничего, кроме @font-face
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans.woff') format('woff'),
+  url('../fonts/opensans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensansbold.woff') format('woff'),
+  url('../fonts/opensansbold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: Bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trade Gothic Bold Cond Twenty';
+  src: url('../fonts/TradeGothicLT-BoldCondTwenty.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
