@@ -65,6 +65,7 @@ let jsList = [
   './node_modules/svg4everybody/dist/svg4everybody.js',
   './node_modules/object-fit-images/dist/ofi.js',
   dirs.source + '/js/pushy.js',
+  dirs.source + '/js/slick.min.js',
   dirs.source + '/js/script.js',
 ];
 
@@ -257,7 +258,8 @@ gulp.task('serve', ['build'], function() {
     dirs.source + '/scss/style.scss',
     dirs.source + '/scss/variables.scss',
     dirs.source + '/blocks/**/*.scss',
-    dirs.source + '/scss/pushy.scss'
+    dirs.source + '/scss/pushy.scss',
+    dirs.source + '/scss/slick.scss'
   ], ['watch:style']);
   // Слежение за html
   gulp.watch([

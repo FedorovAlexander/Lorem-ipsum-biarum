@@ -1,0 +1,119 @@
+.banner {
+  overflow-y: hidden;
+
+  &__list {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    padding-left: 0;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  &__list-item--1 {
+    background-image: url('../img/slide1.jpg');
+  }
+
+  &__list-item--2 {
+    background-image: url('../img/slide2.jpg');
+  }
+
+  &__list-item--3 {
+    background-image: url('../img/slide3.jpg');
+  }
+
+  &__title {
+    display: inline-block;
+    margin-top: 8.5625rem;
+    margin-bottom: 1.5625rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 4.5rem;
+    letter-spacing: -1.64px;
+    color: #ffffff;
+    font-family: $title-font-family;
+    font-size: 5.125rem;
+    font-weight: 700;
+  }
+
+  &__highlight {
+    color: #64c800;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 3.9375rem;
+    max-width: 28.9375rem;
+    text-align: center;
+    text-shadow: 0 2px 7px rgba(6, 80, 101, 0.35);
+    line-height: 2.1875rem;
+    letter-spacing: 0.75px;
+    color: #ffffff;
+    font-family: "Myriad Pro";
+    font-size: 1.5625rem;
+    font-weight: 400;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 3.75rem;
+    width: 32.3125rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 2.1875rem;
+    letter-spacing: 0.54px;
+    color: #ffffff;
+    font-family: $text-font-family;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+}
+
+.slick-list,
+.slick-track {
+  height: 100%;
+  padding: 0 !important;
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  left: calc(50% - 32px);
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+
+    button {
+      margin-right: 6px;
+      margin-left: 6px;
+      width: 0.75rem;
+      height: 0.75rem;
+      border: none;
+      border-radius: 50%;
+      background-color: #fff;
+      font-size: 0;
+    }
+
+    &.slick-active {
+      button {
+        background-color: #64c800;
+      }
+    }
+  }
+}

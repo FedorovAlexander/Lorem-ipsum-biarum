@@ -4,6 +4,7 @@
 @import 'variables.scss';
 @import 'fonts.scss';
 @import 'pushy.scss';
+@import 'slick.scss';
 
 // Растровый спрайт: примеси-генераторы правил
 @import './src/blocks/sprite-png/sprite-png.scss';
@@ -15,3 +16,5 @@
 @import './src/blocks/header/header.scss';
 @import './src/blocks/button/button.scss';
 @import './src/blocks/logo/logo.scss';
+@import './src/blocks/banner/banner.scss';
+@import './src/blocks/teachers/teachers.scss';
