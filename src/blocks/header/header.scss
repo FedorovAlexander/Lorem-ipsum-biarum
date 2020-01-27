@@ -1,7 +1,12 @@
 .header {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
   flex-direction: column;
   justify-content: center;
+  z-index: 1000000000000;
+  width: 100%;
   min-height: 4.375rem;
   background-color: $header-color;
 
@@ -19,11 +24,11 @@
   }
 
   &__nav {
-    flex: 415;
-    max-width: 415px;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex: 415;
+    flex-direction: row;
+    max-width: 415px;
   }
 
   &__button {
