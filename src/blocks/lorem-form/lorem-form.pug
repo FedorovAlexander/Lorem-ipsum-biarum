@@ -1,0 +1,32 @@
+mixin lorem-form()
+  -
+      var formFields = {
+        1 : [
+          'First name',
+          'text',
+          'user_name'
+          ],
+        2 : [
+          'Fast name',
+          'text',
+          'user_last_name'
+          ],
+        3 : [
+          'Email',
+          'email',
+          'user_last_name'
+          ],
+      };
+
+  form.lorem-form(method="POST" action="#")
+    fieldset.lorem-form__fieldset
+      legend.lorem-form__legend
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .lorem-form__image
+        img(src="img/book.png", alt="")
+      .lorem-form__fields-wrapper
+        each val, key in formFields
+          label.lorem-form__label(for=val[0])= val[0]
+            input.lorem-form__input(id=val[0] type=val[1] placeholder=val[0] name=val[2] required)
+      .lorem-form__button
+        +button
