@@ -20,6 +20,15 @@ $(document).ready(function(){
     prevArrow: $('.arrow-right'),
     nextArrow: $('.arrow-left')
   });
+
+  $(document).ready(function(){
+    $(".main-nav__list").on("click","a", function(event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top - 70}, 500);
+    });
+});
 });
 
   
