@@ -2,6 +2,7 @@
   background-image: url('../img/text-bg.jpg');
   background-size: cover;
   padding-top: 4.875rem;
+  padding-bottom: 3.1875rem;
 
   &__wrapper {
     display: flex;
@@ -27,6 +28,8 @@
   }
 
   &__text-accent {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
     color: #ffffff;
     font-family: "Myriad Pro";
     font-size: 1.5625rem;
@@ -41,6 +44,7 @@
   }
 
   &__text {
+    margin-top: 0;
     color: #ffffff;
     font-family: "Myriad Pro";
     font-size: 20px;
