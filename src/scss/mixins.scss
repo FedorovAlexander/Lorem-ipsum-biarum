@@ -1,0 +1,19 @@
+@mixin title {
+  margin-top: 0;
+  margin-bottom: 4.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 49px;
+  font-family: $title-font-family;
+  font-size: 3.25rem;
+  font-weight: 400;
+}
+
+@mixin white-section {
+  background-image: url('../img/spekles.png');
+  background-position: center -3px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5.1875rem;
+  padding-bottom: 4.0625rem;
+}
