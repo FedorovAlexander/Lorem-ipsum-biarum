@@ -6,25 +6,29 @@ mixin teachers()
           'img/teacher3.jpg',
           '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'Teacher 1',
-          'Pro Member'
+          'Pro Member',
+          '#'
           ],
         2 : [
           'img/teacher2.jpg',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
           'Teacher 2',
-          'Pro Member'
+          'Pro Member',
+          '#'
           ],
         3 : [
           'img/teacher1.jpg',
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'Teacher 3',
-          'Pro Member'
+          'Pro Member',
+          '#'
           ],
         4 : [
           'img/teacher4.jpg',
-          'Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.',
+          'Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry. Never gonna say goodbye. Never gonna tell a lie and hurt you.',
           'Rick Astley',
-          'Singer'
+          'Singer',
+          '#'
         ],
         
       };
@@ -44,12 +48,13 @@ mixin teachers()
         ul.teachers__list.slick-slider-teachers
           each val, key in teachers
             li(class="teachers__list-item teachers__list-item--"+key)
-              .teachers__photo-underlay
-                div(class="teachers__photo-wrapper teachers__photo-wrapper--"+key)
-                  img.teachers__photo(src=val[0], alt="Photo of"+val[2], title=val[2])
-                p.teachers__text= val[1]
-                p.teachers__name= val[2]
-                p.teachers__status= val[3]
+              a.teachers__link(href=val[4])
+                .teachers__photo-underlay
+                  div(class="teachers__photo-wrapper teachers__photo-wrapper--"+key)
+                    img.teachers__photo(src=val[0], alt="Photo of"+val[2], title=val[2])
+                  p.teachers__text= val[1]
+                  p.teachers__name= val[2]
+                  p.teachers__status= val[3]
       .teachers__button
         +button
           

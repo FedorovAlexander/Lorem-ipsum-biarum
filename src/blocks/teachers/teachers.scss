@@ -1,5 +1,5 @@
 .teachers {
-  background-image: url('../img/Background_spekles.png');
+  background-image: url('../img/spekles.png');
   background-position: center -3px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,12 +46,55 @@
     }
   }
 
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      .teachers__photo-underlay {
+        background-image: url('../img/spray.png');
+      }
+
+      .teachers__name,
+      .teachers__status {
+        color: #596799;
+      }
+    }
+
+    &:focus {
+
+      .teachers__name,
+      .teachers__status {
+        color: #78c5db;
+      }
+    }
+
+    &:active {
+
+      .teachers__name,
+      .teachers__status {
+        color: #687bc4;
+      }
+    }
+
+    &:disabled {
+
+      .teachers__name,
+      .teachers__status {
+        color: #80c9de;
+      }
+    }
+  }
+
   &__photo-underlay {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
+    background-image: transparent;
+    background-position: -49px -21px;
+    background-repeat: no-repeat;
+    transition: background-image 0.2s linear;
 
     &:after {
       display: block;
@@ -127,6 +170,7 @@
   &__status {
     margin-top: 0;
     margin-bottom: 0;
+    transition: color 0.1s linear;
     line-height: 22px;
     letter-spacing: 0.23px;
     color: #1b8aaa;
