@@ -1,21 +1,9 @@
 .teachers {
-  background-image: url('../img/spekles.png');
-  background-position: center -3px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 5.1875rem;
-  padding-bottom: 4.0625rem;
+  @include white-section;
 
   &__title {
-    margin-top: 0;
-    margin-bottom: 4.75rem;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 49px;
+    @include title;
     color: #3d3e46;
-    font-family: $title-font-family;
-    font-size: 3.25rem;
-    font-weight: 400;
   }
 
   &__highlight {
