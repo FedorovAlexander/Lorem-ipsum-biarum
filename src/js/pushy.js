@@ -3,7 +3,7 @@
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 function pushyMenu() {
-	if ($(window).width() < 768) {
+	if ($(window).width() < 751) {
 		var pushy = $('.pushy'), //menu css class
 			body = $('body'),
 			container = $('#container'), //container css class
