@@ -18,7 +18,18 @@ $(document).ready(function(){
     slidesToShow: 3,
     centerMode: false,
     prevArrow: $('.arrow-right'),
-    nextArrow: $('.arrow-left')
+    nextArrow: $('.arrow-left'),
+
+    responsive: [
+      {
+        breakpoint: 751,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }
+    ]
   });
  
   $(".main-nav__list").on("click","a", function(event) { 
