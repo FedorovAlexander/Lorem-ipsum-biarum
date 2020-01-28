@@ -14,3 +14,5 @@ mixin main-nav(selected)
         each val, key in menu
           li.main-nav__list-item.pushy-link
             a(href=val, title=key class="main-nav__list-link")= key
+        li.main-nav__list-item.main-nav__list-item--button
+            +button
