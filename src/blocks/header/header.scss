@@ -28,7 +28,8 @@
     align-items: center;
     flex: 415;
     flex-direction: row;
-    max-width: 415px;
+    width: 100%;
+    max-width: 25.9375rem;
   }
 
   &__button {
@@ -37,5 +38,23 @@
     flex: 200;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .header {
+    &__nav {
+      max-width: 20rem;
+    }
+    &__button {
+      display: none;
+    }
+
+    .menu-btn {
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      
+    }
   }
 }
