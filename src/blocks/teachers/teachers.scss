@@ -18,6 +18,15 @@
   &__list {
     position: relative;
     padding-left: 0;
+    visibility: hidden;
+    opacity: 0;
+    height: 400px;
+  }
+
+  &__list.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
   }
 
   &__list-item {
