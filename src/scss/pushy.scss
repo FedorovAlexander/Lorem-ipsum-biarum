@@ -226,3 +226,19 @@ $menu_width: 21.875rem !default;
     }
 }
 }
+
+@media screen and (max-width: $screen-xs) {
+    .pushy {
+        width: 100% !important;
+    }
+
+    .pushy.pushy-right {
+        right: -100px;
+    }
+
+    .pushy-open-right {
+        .pushy.pushy-right {
+            right: 0;
+        }
+    }
+}

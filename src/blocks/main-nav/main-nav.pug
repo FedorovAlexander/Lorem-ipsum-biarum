@@ -8,7 +8,8 @@ mixin main-nav(selected)
       'Lorem 4': '#form-section'
     };
 
-  nav.main-nav.pushy.pushy-left
+  nav.main-nav.pushy.pushy-right
+    button.menu-btn.menu-btn--close
     .main-nav__content.pushy-content
       ul.main-nav__list
         each val, key in menu
@@ -16,3 +17,5 @@ mixin main-nav(selected)
             a(href=val, title=key class="main-nav__list-link")= key
         li.main-nav__list-item.main-nav__list-item--button
             +button
+  
+  .site-overlay
