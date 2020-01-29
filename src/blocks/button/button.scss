@@ -3,8 +3,8 @@
   border-radius: 20px;
   background-color: #64c800;
   padding: 0.5rem 3.3125rem 0.4375rem;
-  transition-property: color, background-color;
   transition-duration: 0.1s;
+  transition-property: color, background-color;
   transition-timing-function: linear;
   line-height: 1.125rem;
   color: #ffffff;
@@ -36,10 +36,13 @@
 @media screen and (max-width: $screen-sm) {
   .button {
     width: 100%;
-    border-radius: 6px;
-    font-size: 38px;
-    padding-top: 28px;
-    padding-bottom: 18px;
     height: 80px;
+    border-radius: 6px;
+    padding-top: 1.75rem;
+    padding-right: 1rem;
+    padding-bottom: 1.125rem;
+    padding-left: 1rem;
+    font-size: 2.375rem;
+
   }
 }
