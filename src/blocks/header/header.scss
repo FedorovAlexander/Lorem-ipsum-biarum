@@ -71,7 +71,7 @@
       display: block;
       position: absolute;
       top: 4.375rem;
-      right: 0.9375rem;
+      right: 2rem;
       width: 2.125rem;
       height: 2.125rem;
       background-image: url('../img/close.png');
@@ -95,5 +95,13 @@
     &__nav {
       flex: 50;
     }
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .header {
+    min-height: 7.5rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.375rem;
   }
 }
