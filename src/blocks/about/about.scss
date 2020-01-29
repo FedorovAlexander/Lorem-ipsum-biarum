@@ -57,3 +57,46 @@
     }
   }
 }
+
+@media screen and (max-width: $screen-sm) {
+  .about {
+    background-image: url('../img/about-sm.jpg');
+    background-size: cover;
+    padding-top: 8.125rem;
+    padding-bottom: 8.125rem;
+
+    &__title {
+      margin-bottom: 4.75rem;
+      line-height: 6.25rem;
+      font-size: 6.25rem;
+    }
+
+    &__title--highlight {
+      display: block;
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    &__text-accent {
+      margin-bottom: 50px;
+      max-width: 35.625rem;
+      line-height: 2.1875rem;
+      font-size: 2.0625rem;
+    }
+
+    &__text {
+      margin-bottom: 70px;
+      max-width: 35.625rem;
+      line-height: 2.1875rem;
+      font-size: 2.0625rem;
+
+      &--highlight {
+        margin-bottom: 4.375rem;
+      }
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}
