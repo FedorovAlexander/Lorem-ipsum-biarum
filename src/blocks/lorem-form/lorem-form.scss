@@ -50,7 +50,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1.25rem;
-    width: 71%;
+    width: 72%;
     line-height: 1.125rem;
     color: #1b8aaa;
     font-family: $form-font-family;
@@ -60,7 +60,6 @@
 
   &__input {
     box-sizing: border-box;
-    margin-left: 2.6875rem;
     width: 100%;
     max-width: 28.75rem;
     padding: 0.625rem 0.875rem 0.5625rem;
@@ -115,4 +114,62 @@
 
 input[type=email]:disabled {
   color: #6e6c6c;
+}
+
+@media screen and (max-width: $screen-md) {
+  .lorem-form {
+    &__label {
+      width: 100%;
+      max-width: 63%;
+    }
+
+    &__input {
+      max-width: 17.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .lorem-form {
+    background-color: transparent;
+    padding: 0;
+
+    &__legend {
+      margin-bottom: 0;
+      max-width: 39.375rem;
+    }
+
+    &__fields-wrapper {
+      margin-bottom: 5rem;
+    }
+
+    &__label {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 2.625rem;
+      max-width: 100% !important;
+      line-height: 1.875rem;
+      font-size: 1.8125rem;
+    }
+
+    &__input {
+      box-sizing: border-box;
+      margin-top: 2.1875rem;
+      max-width: 100% !important;
+      padding: 1.0625rem 1.625rem 1rem;
+      font-size: 1.875rem;
+    }
+
+    &__image {
+      position: relative;
+      bottom: unset;
+      left: unset;
+      margin-left: 2.8125rem;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
 }

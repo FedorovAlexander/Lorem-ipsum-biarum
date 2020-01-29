@@ -27,3 +27,23 @@
     color: #1b8aaa;
   }
 }
+
+@media screen and (max-width: $screen-sm) {
+  .form-section {
+    background-image: none;
+
+    &:after {
+      display: none;
+    }
+
+    &__title {
+      line-height: 6.25rem;
+      font-size: 6.25rem;
+    }
+
+    &__highlight {
+      display: block;
+      width: 100%;
+    }
+  }
+}

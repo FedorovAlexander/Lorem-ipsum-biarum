@@ -7,7 +7,7 @@ mixin lorem-form()
           'user_name'
           ],
         2 : [
-          'Fast name',
+          'Last name',
           'text',
           'user_last_name'
           ],
@@ -23,7 +23,10 @@ mixin lorem-form()
       legend.lorem-form__legend
         | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       .lorem-form__image
-        img(src="img/book.png", alt="")
+        picture
+          source(srcset='img/book-sm.png', media='(max-width: 750px)')
+          img(src='img/book.png', alt="Photo of book about biomarkers.")
+
       .lorem-form__fields-wrapper
         each val, key in formFields
           label.lorem-form__label(for=val[0])= val[0]
