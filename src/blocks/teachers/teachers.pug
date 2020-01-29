@@ -54,11 +54,16 @@ mixin teachers()
             li(class="teachers__list-item teachers__list-item--"+key)
               a.teachers__link(href=val[4])
                 .teachers__photo-underlay
-                  div(class="teachers__photo-wrapper teachers__photo-wrapper--"+key)
-                     picture
-                      source(srcset=val[5], media='(max-width: 750px)')
-                      img.teachers__photo(src=val[0], alt="Photo of"+val[2], title=val[2])
-                    
+                  .teachers__corners-wrapper
+                    span.corner.corner--top-left
+                    span.corner.corner--top-right
+                    span.corner.corner--bottom-left
+                    span.corner.corner--bottom-right
+                    div(class="teachers__photo-wrapper teachers__photo-wrapper--"+key)
+                      picture
+                        source(srcset=val[5], media='(max-width: 750px)')
+                        img.teachers__photo(src=val[0], alt="Photo of"+val[2], title=val[2])
+                      
                   p.teachers__text= val[1]
                   p.teachers__name= val[2]
                   p.teachers__status= val[3]

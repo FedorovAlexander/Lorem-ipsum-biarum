@@ -109,6 +109,13 @@
     }
   }
 
+  &__corners-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   &__photo-wrapper {
     position: relative;
     z-index: 2;
@@ -201,7 +208,7 @@
   }
 
   .arrow-right {
-    right: -15px;
+    right: -20px;
   }
 }
 
@@ -316,20 +323,64 @@
           background-size: contain;
         }
       }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
 
     &__photo-underlay {
       &:after {
         top: 10.0625rem;
         width: 10.5625rem;
-        width: 350px;
-        height: 368px;
+        width: 21.875rem;
+        height: 23rem;
 
       }
     }
 
-    &__photo-wrapper {
+    &__corners-wrapper {
+      position: relative;
       margin-bottom: 9.25rem;
+
+      .corner {
+        display: block;
+        position: absolute;
+        z-index: 3;
+        width: 45px;
+        height: 46px;
+        background-image: url('../img/corner.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &--top-left {
+          top: -15px;
+          left: -17px;
+        }
+
+        &--top-right {
+          top: -15px;
+          right: -17px;
+          transform: rotate(90deg);
+        }
+
+        &--bottom-left {
+          bottom: -14px;
+          left: -17px;
+          transform: rotate(270deg);
+        }
+
+        &--bottom-right {
+          right: -17px;
+          bottom: -14px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__photo-wrapper {
+      margin-bottom: 0;
       width: 25.0625rem;
       height: 29.9375rem;
       box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.2);
@@ -344,13 +395,13 @@
 
     &__name,
     &__status {
-      line-height: 48px;
-      font-size: 48px;
+      line-height: 3rem;
+      font-size: 3rem;
     }
 
     .arrow {
-      width: 46px;
-      height: 88px;
+      width: 2.875rem;
+      height: 5.5rem;
     }
 
     .arrow-top,
@@ -359,7 +410,57 @@
     }
 
     .arrow-left {
-      top: 21.5%;
+      top: 13.125rem;
+    }
+
+    .arrow-right {
+      top: 15.625rem;
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .teachers {
+    &__list-item {
+      margin-right: 0.625rem !important;
+      margin-left: 0.625rem !important;
+    }
+
+    &__photo-underlay {
+      &:after {
+        display: none;
+      }
+    }
+
+    &__corners-wrapper {
+      margin-bottom: 2.5rem;
+    }
+
+    &__photo-wrapper {
+      width: 100%;
+      height: auto;
+      padding-right: 0.9375rem;
+      padding-bottom: 5rem;
+      padding-left: 0.9375rem;
+    }
+
+    &__text {
+      line-height: 2.5rem;
+      font-size: 2rem;
+    }
+
+    &__name,
+    &__status {
+      line-height: 2.5rem;
+      font-size: 2rem;
+    }
+
+    .arrow-left {
+      top: 10.625rem;
+    }
+
+    .arrow-right {
+      top: 13.125rem;
     }
   }
 }
