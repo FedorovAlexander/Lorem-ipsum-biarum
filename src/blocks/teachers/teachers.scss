@@ -36,6 +36,12 @@
     justify-content: flex-start;
     padding-top: 25px;
 
+    &--1 {
+      .teachers__photo-underlay {
+        background-image: url('../img/spray.png');
+      }
+    }
+
     img {
       display: inline-block;
       position: relative;
@@ -47,9 +53,6 @@
     text-decoration: none;
 
     &:hover {
-      .teachers__photo-underlay {
-        background-image: url('../img/spray.png');
-      }
 
       .teachers__name,
       .teachers__status {
@@ -91,7 +94,6 @@
     background-image: transparent;
     background-position: -49px -21px;
     background-repeat: no-repeat;
-    transition: background-image 0.2s linear;
 
     &:after {
       display: block;
@@ -208,7 +210,7 @@
   position: absolute;
   top: 25%;
   z-index: 100;
-  width: 24px;
+  width: 1.5rem;
   height: 2.8125rem;
   cursor: pointer;
   transform: translateX(-50%) translateY(-50%);
@@ -273,12 +275,23 @@
   }
 }
 
+@media screen and (max-width: $screen-md) {
+  .teachers {
+    &__photo-underlay {
+      background-position: -80px -21px;
+    }
+  }
+}
+
 @media screen and (max-width: $screen-sm) {
   .teachers {
+    background-image: none;
     padding-top: 10.625rem;
+    padding-bottom: 8.1875rem;
+
     &__title {
-      font-size: 6.25rem;
       line-height: 6.25rem;
+      font-size: 6.25rem;
     }
 
     &__highlight {
@@ -286,10 +299,67 @@
       width: 100%;
     }
 
+    &__text {
+      width: 100%;
+      max-width: 36.25rem;
+      line-height: 3.4375rem;
+      font-size: 2.375rem;
+    }
+
+    &__list-item {
+      position: relative;
+
+      &--1 {
+        .teachers__photo-underlay {
+          background-image: url('../img/spray-sm.png');
+          background-position: center top;
+          background-size: contain;
+        }
+      }
+    }
+
+    &__photo-underlay {
+      &:after {
+        top: 10.0625rem;
+        width: 10.5625rem;
+        width: 350px;
+        height: 368px;
+
+      }
+    }
+
     &__photo-wrapper {
+      margin-bottom: 9.25rem;
+      width: 25.0625rem;
+      height: 29.9375rem;
+      box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.2);
+      background-image: url('../img/frame.jpg');
+      background-position: -0.75rem -1.4375rem;
+      padding-top: 1.0625rem;
+
       &:before {
         display: none;
       }
+    }
+
+    &__name,
+    &__status {
+      line-height: 48px;
+      font-size: 48px;
+    }
+
+    .arrow {
+      width: 46px;
+      height: 88px;
+    }
+
+    .arrow-top,
+    .arrow-bottom {
+      height: 4px;
+    }
+
+    .arrow-left {
+      top: 21.5%;
     }
   }
 }
