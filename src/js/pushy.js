@@ -226,7 +226,7 @@ function pushyMenu() {
 			});
 		}
 	} else {
-		console.log('woof')
+		return false;
 	};
 }
 pushyMenu();

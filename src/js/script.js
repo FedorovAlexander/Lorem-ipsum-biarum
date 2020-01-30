@@ -6,6 +6,8 @@ $(document).ready(function(){
     infinite: true,
     speed: 300,
     slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
     centerMode: true,
     prevArrow: false,
     nextArrow: false
@@ -35,9 +37,13 @@ $(document).ready(function(){
  
   $(".main-nav__list").on("click","a", function(event) { 
       event.preventDefault(); 
-      var id  = $(this).attr('href'), 
-          top = $(id).offset().top; 
-      $('body,html').animate({scrollTop: top - 70}, 500); 
+      var id  = $(this).attr('href'); 
+      var top = $(id).offset().top; 
+      if ($(window).width() < 751) {
+        $('body,html').animate({scrollTop: top - 100}, 500); 
+      } else {
+        $('body,html').animate({scrollTop: top - 40}, 500); 
+      }
   }); 
 });
 

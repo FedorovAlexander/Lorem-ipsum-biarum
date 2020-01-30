@@ -1,5 +1,19 @@
 .banner {
+  position: relative;
   margin-top: 4.375rem;
+
+  &__title-wrapper {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
 
   &__list {
     position: relative;
@@ -25,6 +39,7 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    min-height: 545px;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -44,6 +59,7 @@
 
   &__title {
     display: inline-block;
+    flex: 1;
     margin-top: 8.5625rem;
     margin-bottom: 1.5625rem;
     text-align: center;
@@ -132,6 +148,10 @@
 @media screen and (max-width: $screen-sm) {
   .banner {
     margin-top: 10rem;
+
+    &__list.slick-initialized {
+      height: 71.25rem;
+    }
 
     &__list-item--1 {
       background-image: url('../img/slide-1-sm.jpg');
